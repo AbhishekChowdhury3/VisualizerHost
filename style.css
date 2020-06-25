@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 1rem;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+.sun {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem auto;
+    position: absolute;
+    background: "#ff2233";
+    border-radius: 50%;
+    z-index: 20;
+    bottom: -0.4rem;
+    right: 0.3rem;
+}
+
+
+
+.show-animation {
+    display: block !important;
+  }
+  
+  .animation-frame {
+    display: none;
+  }
+
+  .show-animation2 {
+    display: block !important;
+  }
+  
+  .animation-frame2 {
+    display: none;
+  }
+
+.sun::after,
+.sun::before {
+    content: "";
+    position: absolute; 
+    bottom: -0.4rem;
+    right: 0.3rem;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    border-radius: 50%;
+    mask-image: radial-gradient(rgba(0, 0, 0, 1) 40%, transparent 65%);
+    
+
+}
+
+.sun::after {
+    background: 
+ repeating-conic-gradient(
+        from 0deg,
+        rgba(63, 216, 36, 0.9) 0deg 5deg,
+        rgba(93, 216, 36, 0.5) 2deg 7deg,
+        rgba(63, 216, 36, 0.2) 3deg 8deg,
+        transparent 5deg 10deg
+    );
+    transform: rotate(15deg);
+    animation: rotate 360s linear, scale 1s linear infinite;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes scale {
+    0% {
+        transform: scale(0.1);
+    }
+    20% {
+        transform: scale(0.5);
+    }
+    40% {
+        transform: scale(0.2);
+    }
+    60% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.5);
+    }
+    80% {
+        transform: scale(0.3);
+    }
+    90% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(0.6);
+    }
+}
+
+.sunaudio {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem auto;
+    position: absolute;
+    background: "#ff2233";
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    z-index: 30;
+    bottom: -0.3rem;
+    right: -0.8rem;
+  }
+ 
+
+  .sunaudio::after,
+  .sunaudio::before {
+      content: "";
+      position: absolute;
+      bottom: -0.3rem;
+      right: -0.8rem;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+border-radius: 50%;
+      mask-image: radial-gradient(rgba(0, 0, 0, 1) 40%, transparent 65%);
+      
+  
+  }
+
+  .sunaudio::after {
+      background: 
+             repeating-conic-gradient(
+          from 0deg,
+          rgba(48, 36, 216, 0.383) 0deg 5deg,
+          rgba(36, 48, 216, 0.5) 2deg 7deg,
+          rgba(63, 109, 194, 0.76) 3deg 8deg,
+          transparent 5deg 10deg
+      );
+      transform: rotate(15deg);
+      animation: rotate2 360s linear, scale2 1s linear infinite;
+  }
+  @keyframes rotate2 {
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  @keyframes scale2 {
+      0% {
+          transform: scale(0.1);
+      }
+      20% {
+          transform: scale(0.4);
+      }
+      40% {
+          transform: scale(0.2);
+      }
+      60% {
+          transform: scale(0.6);
+      }
+      70% {
+          transform: scale(0.5);
+      }
+      80% {
+          transform: scale(0.3);
+      }
+      90% {
+          transform: scale(0.5);
+      }
+      100% {
+          transform: scale(0.6);
+      }
+  }
+  
+
+  .anime 
+  {
+      position: absolute;
+      bottom: -.3rem;
+      right: -2.9rem;
+      display: flex;
+      flex-direction: row;
+  }
+
+
+#container1 {
+    padding: 2rem;
+    position: relative;
+    height: 80vh;
+  }
+
+  .call {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    color: #f0f0f0;
+    margin: 25px auto 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    position: absolute;
+    z-index: 998;
+    overflow: hidden;
+    background: #42a5f5;
+
+    bottom: 3.4rem;
+    right: 2.9rem;
+    /* top: 50%;
+    left: 50%; */
+  }
+  h4 {
+    text-align: center;
+  }
+  .callwidget {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 1rem;
+  /* border: 1px solid yellow; */
+}
